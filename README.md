@@ -1,11 +1,11 @@
 ### Parameters
-`hostname` = `grafik`, `volta01`
-`algorithmType` = `topk`, `projection`, `esom`
-`algo` = different for different types
-`N` = 1M
-`dim` = 4, 8, 16, 32, 64
-`gridSize` = 128, 256, 512, 1024
-`k` = 8, 16, 32, 64 (pro topk, pro projection jsou to hodnoty -1, aby to sedelo)
+- `hostname` = `grafik`, `volta01`
+- `algorithmType` = `topk`, `projection`, `esom`
+- `algo` = different for different types
+- `N` = 1M
+- `dim` = 4, 8, 16, 32, 64
+- `gridSize` = 128, 256, 512, 1024
+- `k` = 8, 16, 32, 64 (for projection it is 7, 15, 31, 63)
 
 ### Algorithms
 
@@ -54,6 +54,6 @@ CSV columns
 - `groupsPerBlock`
 - `itemsPerBlock`
 - `itemsPerThread`
-- `initTime` [ms]
+- `initTime` [ms] -- host-device memory copying
 - `kernelTime` [ms] -- this is the important number !!!
 
